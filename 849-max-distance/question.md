@@ -10,6 +10,8 @@ A person wants to sit in the seat such that the distance between them and the cl
 
 Return that maximum distance to the closest person.
 
+The implementation iterates through the seats, keeping track of the index of the last occupied seat. For each empty seat, it calculates the distance to the last occupied seat and the next occupied seat (or the end of the row if no next occupied seat exists). The maximum of these distances (or half the distance between two occupied seats) is considered. The overall maximum distance found during this process is returned as the result.
+
 ### Test case 1
 Input: seats = [1,0,0,0,1,0,1]
 Output: 2
